@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>The Game</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main class="home">
+  <p class="label">Time since I last lost The Game</p>
+  <div class="timer" role="timer">
+    <div><b id="d">--</b><span>days</span></div>
+    <div><b id="h">--</b><span>hours</span></div>
+    <div><b id="m">--</b><span>min</span></div>
+    <div><b id="s">--</b><span>sec</span></div>
+  </div>
+  <p id="since" class="muted">&nbsp;</p>
+  <button id="lost" class="lost" type="button">I lost The Game</button>
+  <p id="err" class="err" hidden>Can't reach the server.</p>
+</main>
+<nav class="nav"><a href="/stats">Stats</a></nav>
+<script src="/home.js"></script>
+</body>
+</html>
