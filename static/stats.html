@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>The Game · Stats</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main class="page">
+  <header class="top">
+    <a href="/">← Timer</a>
+    <h1>Stats</h1>
+  </header>
+
+  <p id="err" class="err" hidden>Can't load data from the server.</p>
+
+  <section id="tiles" class="tiles"></section>
+
+  <p id="empty" class="muted" hidden>No losses recorded yet. Charts will show up after your first loss.</p>
+
+  <div id="charts">
+    <section><h2>Streak history</h2><div id="c-streaks" class="chart"></div></section>
+    <section><h2>Losses by weekday</h2><div id="c-weekday" class="chart"></div></section>
+    <section><h2>Losses by hour of day</h2><div id="c-hour" class="chart"></div></section>
+    <section><h2>Losses per month</h2><div id="c-month" class="chart"></div></section>
+  </div>
+
+  <section><h2>Longest streaks</h2><ul id="top" class="rows"></ul></section>
+  <section id="recent-sec"><h2>Recent losses</h2><ul id="recent" class="rows"></ul></section>
+
+  <footer class="foot"><a href="/api/export.csv" download>Download CSV</a></footer>
+</main>
+<script src="/stats.js"></script>
+</body>
+</html>
