@@ -1,0 +1,19 @@
+[Unit]
+Description=The Game timer
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /opt/thegame/app.py
+Environment=THEGAME_PORT=8080
+Environment=THEGAME_DATA=/var/lib/thegame/losses.csv
+# Runs as a throwaway unprivileged user; /var/lib/thegame is created and owned for it.
+DynamicUser=yes
+StateDirectory=thegame
+Restart=on-failure
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target
